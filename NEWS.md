@@ -15,6 +15,7 @@
 - Fixed `FindSpatiallyVariableFeatures()` to correctly match FOV coordinates to cells in the requested assay and handle various edge cases, including fewer than two matched cells, a single varying feature, or no varying requested features ([#10504](https://github.com/satijalab/seurat/pull/10504))
 - Updated argument handling in `FindSpatiallyVariableFeatures()` by resolving `selection.method` with `match.arg()` and restoring the `FindSpatiallyVariableFeatures.Assay()` default `nfeatures` value to `2000` ([#10504](https://github.com/satijalab/seurat/pull/10504))
 - Fixed `RunMarkVario()` to return one named mark variogram result per feature for single-feature inputs and parallel execution chunks ([#10505](https://github.com/satijalab/seurat/pull/10505))
+- Updated `IntegrateLayers()` to throw an error message when less than two groups/layers are provided ([#10396](https://github.com/satijalab/seurat/pull/10396))
 
 # Seurat 5.5.1
 
