@@ -638,10 +638,9 @@ IntegrateLayers <- function(
   # whichever method was passed in - bail out here instead
   if (n.groups < 2L) {
     abort(message = paste0(
-      "The ", sQuote(x = assay), " assay holds ", n.groups,
-      " group(s) of cells but 'IntegrateLayers' requires at least two; split ",
-      "the assay by batch and check that any subsetting retained cells from ",
-      "more than one batch"
+      "The ", sQuote(x = assay), " assay has ", n.groups,
+      ifelse(n.groups == 1L, yes = " group", no = " groups"),
+      " of cells, but 'IntegrateLayers' requires at least two"
     ))
   }
   if (!is.null(scale.layer)) {
