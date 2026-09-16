@@ -1486,7 +1486,7 @@ DESeq2DETest <- function(
   if (!requireNamespace("DESeq2", quietly=TRUE)) {
     stop("Please install DESeq2 - learn more at https://bioconductor.org/packages/release/bioc/html/DESeq2.html")
   }
-  CheckDots(..., fxns = 'DESeq2::results')
+  CheckDots(..., fxns = DESeq2::results)
   group.info <- data.frame(row.names = c(cells.1, cells.2))
   group.info[cells.1, "group"] <- "Group1"
   group.info[cells.2, "group"] <- "Group2"
