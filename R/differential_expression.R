@@ -1498,7 +1498,7 @@ DESeq2DETest <- function(
     design = ~ group
   )
   dds1 <- DESeq2::estimateSizeFactors(object = dds1)
-  dds1 <- DESeq2::estimateDispersions(object = dds1, fitType = "local")
+  dds1 <- DESeq2::estimateDispersions(object = dds1)
   dds1 <- DESeq2::nbinomWaldTest(object = dds1)
   res <- DESeq2::results(
     object = dds1,
